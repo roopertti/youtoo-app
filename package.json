@@ -10,8 +10,8 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "lint": "eslint --ext .tsx,.ts src/",
     "lint-fix": "eslint --ext .tsx,.ts --fix src/",
-    "prettier": "prettier --check src/",
-    "prettier-fix": "prettier --write src/"
+    "prettier": "prettier --check --end-of-line lf src/",
+    "prettier-fix": "prettier --write --end-of-line lf src/"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
