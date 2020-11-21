@@ -3,8 +3,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import AccountCircle from "@material-ui/icons/AccountCircle";
+
+import { IconButton } from "../index";
+import { Settings } from "../icons";
+
 
 const useStyles = makeStyles({
   grow: {
@@ -20,9 +22,7 @@ const Header = () => {
       <Toolbar>
         <Typography>Youtoo</Typography>
         <div className={classes.grow} />
-        <IconButton>
-          <AccountCircle />
-        </IconButton>
+        <IconButton icon={<Settings />} />
       </Toolbar>
     </AppBar>
   );

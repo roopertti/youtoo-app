@@ -1,8 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { Header, Footer } from "../index"
-
+import { Header, Footer } from "../index";
 
 const useStyles = makeStyles({
   main: {
