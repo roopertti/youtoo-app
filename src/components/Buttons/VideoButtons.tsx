@@ -4,6 +4,8 @@ import { Grid } from "@material-ui/core";
 import { Play, Pause, Next, Previous } from "../icons";
 import { IconButton } from "../index";
 
+import { makeStyles, Theme } from "@material-ui/core/styles";
+
 export interface Props {
     isPlaying: boolean;
     buttonSize?: "small" | "medium";
@@ -13,11 +15,18 @@ export interface Props {
     skipPrev: () => void;
 }
 
+const useStyles = makeStyles((theme: Theme) => ({
+    container: {
+        backgroundColor: theme.palette.background.default,
+    }
+  }));
+
 const VideoButtons = (props: Props) => {
     const { isPlaying, disabled = false, play, skipNext, skipPrev } = props;
+    const classes = useStyles();
     return(
         <>
-            <Grid spacing={1} container >
+            <Grid className={classes.container} spacing={1} container >
                 <Grid item>
                     <IconButton onClick={skipPrev} disabled={disabled} icon={<Previous />}/>
                 </Grid>

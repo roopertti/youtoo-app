@@ -18,7 +18,7 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" component="header">
+    <AppBar style={{userSelect: "none"}} position="static" component="header">
       <Toolbar>
         <Typography>Youtoo</Typography>
         <div className={classes.grow} />
