@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
-  }
+  },
 });
 
 const Footer = () => {
@@ -25,10 +25,14 @@ const Footer = () => {
     <footer className={classes.footer}>
       <Grid className={classes.container} container>
         <Grid>
-          <VideoButtons isPlaying={isWatching} play={() => setIsWatching(!isWatching)} skipNext={() => {}} skipPrev={() => {}} />
+          <VideoButtons
+            isPlaying={isWatching}
+            play={() => setIsWatching(!isWatching)}
+            skipNext={() => {}}
+            skipPrev={() => {}}
+          />
         </Grid>
       </Grid>
-      
     </footer>
   );
 };
