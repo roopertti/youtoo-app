@@ -68,6 +68,6 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": "npm run lint-fix",
-    "*.{ts,css,md,tsx,ts}": "npm run prettier-fix"
+    "*.{ts,css,md,tsx}": "npm run prettier-fix"
   }
 }
