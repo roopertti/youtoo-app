@@ -3,9 +3,8 @@ import { IconButton as Button, IconButtonProps } from "@material-ui/core";
 
 import { makeStyles, Theme, fade } from "@material-ui/core/styles";
 
-
 export interface Props extends Omit<IconButtonProps, "size"> {
-    icon : React.ReactNode;
+  icon: React.ReactNode;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -19,12 +18,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   }));
 
 const IconButton = (props: Props) => {
-    const { icon,  ...iconButtonProps } = props;
-    const classes = useStyles();
-    return(
-        <Button className={classes.button} children={icon} {...iconButtonProps} />
-    )
-}
-
+  const { icon, ...iconButtonProps } = props;
+  const classes = useStyles();
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <Button className={classes.button} {...iconButtonProps}>{icon}</Button>;
+};
 
 export default IconButton;

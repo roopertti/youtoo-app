@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPLugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const DotEnv = require('dotenv-webpack');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -10,6 +11,7 @@ const plugins = [
   new HtmlWebpackPLugin({
     template: './src/index.html',
   }),
+  new DotEnv()
 ];
 
 if (!devMode) {
