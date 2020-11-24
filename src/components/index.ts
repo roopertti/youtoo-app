@@ -12,3 +12,6 @@ export {
   default as VideoButtons,
   Props as VideoButtonsProps,
 } from "./Buttons/VideoButtons";
+
+/* Themes */
+export { default as darkTheme } from "../darkTheme";

@@ -78,7 +78,7 @@ const Header = () => {
   );
 
   return (
-    <AppBar position="static" component="header">
+    <AppBar style={{userSelect: "none"}} position="static" component="header">
       <Toolbar className={classes.header}>
         {isMobile ? renderForMobile() : renderForDesktop()}
       </Toolbar>

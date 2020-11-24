@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
 import { VideoButtons } from "../index";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   footer: {
     boxShadow: "0px 0px 8px #343434",
     padding: "2rem 1.5rem",
     flexShrink: 1,
+    backgroundColor: theme.palette.primary.dark
   },
   container: {
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
   },
-});
+}));
 
 const Footer = () => {
   const classes = useStyles();
